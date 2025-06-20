@@ -1,0 +1,29 @@
+~ dios_escena
+Dios: [wave] [b] [i]¡¿Qué pasó quéee?!  [/i][/b] [/wave]
+Azrael: Lo siento, Señor... no sé cómo llegó ese imp hasta aquí... no pude detenerlo.
+Dios: [i]Dios mío... Bueno[wait=0.3], ese soy yo.
+Dios: [i]Lucifer roba la [wave] [color=blue]Conciencia Humana[/color] [/wave]...
+Dios: [i] Y ahora tú me dices que perdiste [wave] [color=red] [b]¡tres libros sagrados!...[/b] [/color] [/wave]
+Dios: [i] A mí me va a dar algo celestial...
+Azrael: Puedo remediarlo, Señor...
+Dios: [i] Hmm... quisiera enviarte a mis mejores guerreros... pero están ocupados en recuperar la [b] [color=red]Conciencia Humana[/color] [/b]
+Azrael: Entiendo... pero si no recupero los libros... [b]Bolivia estará...[/b]
+Dios: [i]¡Ey! No dije que no te ayudaría. Tranquilo, Azrael... [b]respira profundo[/b]...
+~ dios_habilidades
+Dios: [i]Te otorgaré tres habilidades divinas para esta misión:
+- (Comunicación Activa)
+	Dios: [b]Podrás hablar con los humanos.[/b] ¡Sí! Como en los sueños... pero esta vez con WiFi angelical. => dios_habilidades
+- (Apariencia Humana)
+	Dios: [b]Ya sabes que los ángeles no se ven como en los cuadros...[/b] Así que adoptarás una forma más... instagrameable. => dios_habilidades
+- (Amuleto Vital)
+	Dios: Como tendrás cuerpo humano... [b]también serás mortal.[/b] Este amuleto te da [b] [wave]5 oportunidades.[/wave] [/b] Y además... [b]te guiará instintivamente hacia los libros perdidos.[/b] => dios_habilidades
+- Siguiente => dios_dialoguo_siguiente
+~ dios_dialoguo_siguiente
+Azrael: Gracias, Señor. Daré todo mi esfuerzo.
+
+Dios: [i]Solo no tardes mucho... Tu estancia en la Tierra es [color=red] [i]temporal[/i] [/color]. Cuando el tiempo se agote... ni el amuleto podrá ayudarte.
+Azrael: Lo sé...
+Dios: [i]Yo te estaré vigilando. Si necesitas ayuda... haz una oración (o manda un WhatsApp, lo que funcione primero).
+Dios: [i]Ve, Azrael... 
+Dios: [i] [center] [b]Recupera los libros de Bolivia.[/b] [/center]
+=> END

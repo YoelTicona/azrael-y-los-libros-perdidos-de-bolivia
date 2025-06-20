@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dcsdbj40l0onx"
+path="res://.godot/imported/game over retro sound foley.mp3-0a9b296a8fa858a979486d740bcd984f.mp3str"
+
+[deps]
+
+source_file="res://music/fx/game over retro sound foley.mp3"
+dest_files=["res://.godot/imported/game over retro sound foley.mp3-0a9b296a8fa858a979486d740bcd984f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

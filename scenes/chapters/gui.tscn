@@ -1,0 +1,195 @@
+[gd_scene load_steps=21 format=3 uid="uid://cstwywpsk3shs"]
+
+[ext_resource type="Script" uid="uid://bxinep1nl0jvg" path="res://Scripts/gui.gd" id="1_7hmvu"]
+[ext_resource type="FontFile" uid="uid://bfnihovgs6i60" path="res://fonts/pixelart.ttf" id="2_xgg2n"]
+[ext_resource type="AudioStream" uid="uid://dmrnp5u7k77gf" path="res://music/Ángeles-en-la-Montaña.ogg" id="3_71lrb"]
+[ext_resource type="Texture2D" uid="uid://basturrsml5m6" path="res://Sprites/HUD/06.png" id="4_xgg2n"]
+[ext_resource type="Texture2D" uid="uid://bls6fc2370qmh" path="res://Sprites/gdb-playstation-3.png" id="5_71lrb"]
+
+[sub_resource type="FontVariation" id="FontVariation_efmwq"]
+
+[sub_resource type="Theme" id="Theme_mfius"]
+default_font = SubResource("FontVariation_efmwq")
+
+[sub_resource type="Theme" id="Theme_jqlde"]
+default_font = ExtResource("2_xgg2n")
+default_font_size = 21
+
+[sub_resource type="Theme" id="Theme_71lrb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elmmu"]
+atlas = ExtResource("4_xgg2n")
+region = Rect2(192, 64, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ouu2i"]
+atlas = ExtResource("4_xgg2n")
+region = Rect2(144, 80, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_71lrb"]
+atlas = ExtResource("4_xgg2n")
+region = Rect2(96, 80, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgg2n"]
+atlas = ExtResource("4_xgg2n")
+region = Rect2(48, 16, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tf443"]
+atlas = ExtResource("4_xgg2n")
+region = Rect2(0, 16, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwmsg"]
+atlas = ExtResource("5_71lrb")
+region = Rect2(16, 448, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knsft"]
+atlas = ExtResource("5_71lrb")
+region = Rect2(32, 448, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88u8q"]
+atlas = ExtResource("5_71lrb")
+region = Rect2(16, 480, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7t4ph"]
+atlas = ExtResource("5_71lrb")
+region = Rect2(32, 480, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7r7wt"]
+atlas = ExtResource("5_71lrb")
+region = Rect2(16, 192, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdnjr"]
+atlas = ExtResource("5_71lrb")
+region = Rect2(64, 192, 16, 16)
+
+[node name="GUI" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_7hmvu")
+
+[node name="Container" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+tooltip_auto_translate_mode = 1
+theme = SubResource("Theme_mfius")
+
+[node name="Label" type="Label" parent="Container"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Puntos: 00000000"
+horizontal_alignment = 1
+
+[node name="GameOver" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+tooltip_auto_translate_mode = 1
+theme = SubResource("Theme_jqlde")
+color = Color(0.92549, 0.486275, 0.152941, 0.45098)
+
+[node name="Container" type="VBoxContainer" parent="GameOver"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -161.5
+offset_top = -46.0
+offset_right = 161.5
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_71lrb")
+
+[node name="Label" type="Label" parent="GameOver/Container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_xgg2n")
+theme_override_font_sizes/font_size = 46
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="GameOver/Container"]
+layout_direction = 3
+layout_mode = 2
+
+[node name="exit" type="Button" parent="GameOver/Container/Buttons"]
+layout_mode = 2
+text = "Salir
+"
+
+[node name="restart" type="Button" parent="GameOver/Container/Buttons"]
+layout_mode = 2
+text = "Reiniciar"
+icon_alignment = 1
+
+[node name="sound" type="AudioStreamPlayer2D" parent="GameOver"]
+stream = ExtResource("3_71lrb")
+
+[node name="lifeContainer" type="Node" parent="."]
+
+[node name="life6" type="Sprite2D" parent="lifeContainer"]
+visible = false
+position = Vector2(74, 41)
+scale = Vector2(2.896, 2.896)
+texture = SubResource("AtlasTexture_elmmu")
+
+[node name="life5" type="Sprite2D" parent="lifeContainer"]
+visible = false
+position = Vector2(74, 41)
+scale = Vector2(2.896, 2.896)
+texture = SubResource("AtlasTexture_elmmu")
+
+[node name="life4" type="Sprite2D" parent="lifeContainer"]
+visible = false
+position = Vector2(74, 41)
+scale = Vector2(2.896, 2.896)
+texture = SubResource("AtlasTexture_ouu2i")
+
+[node name="life3" type="Sprite2D" parent="lifeContainer"]
+visible = false
+position = Vector2(74, 41)
+scale = Vector2(2.896, 2.896)
+texture = SubResource("AtlasTexture_71lrb")
+
+[node name="life2" type="Sprite2D" parent="lifeContainer"]
+visible = false
+position = Vector2(74, 41)
+scale = Vector2(2.896, 2.896)
+texture = SubResource("AtlasTexture_xgg2n")
+
+[node name="life1" type="Sprite2D" parent="lifeContainer"]
+position = Vector2(74, 41)
+scale = Vector2(2.896, 2.896)
+texture = SubResource("AtlasTexture_tf443")
+
+[node name="move_left" type="TouchScreenButton" parent="."]
+position = Vector2(12, 187)
+scale = Vector2(4.3125, 4.3125)
+texture_normal = SubResource("AtlasTexture_uwmsg")
+texture_pressed = SubResource("AtlasTexture_knsft")
+action = "move_left"
+
+[node name="move_right" type="TouchScreenButton" parent="."]
+position = Vector2(81, 186.008)
+scale = Vector2(4.375, 4.375)
+texture_normal = SubResource("AtlasTexture_88u8q")
+texture_pressed = SubResource("AtlasTexture_7t4ph")
+action = "move_right"
+
+[node name="jump" type="TouchScreenButton" parent="."]
+position = Vector2(402, 195.283)
+scale = Vector2(3.4375, 3.53467)
+texture_normal = SubResource("AtlasTexture_7r7wt")
+texture_pressed = SubResource("AtlasTexture_vdnjr")
+action = "jump"
+
+[connection signal="pressed" from="GameOver/Container/Buttons/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="GameOver/Container/Buttons/restart" to="." method="_on_restart_pressed"]

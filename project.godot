@@ -1,0 +1,93 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Azrael y los libros perdidos de Bolivia"
+run/main_scene="uid://ckm5mjor1xm72"
+config/features=PackedStringArray("4.4", "Mobile")
+run/max_fps=60
+config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://Scripts/global/global.gd"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+
+[dialogue_manager]
+
+runtime/balloon_path="res://dialogos/balloon_prologo.tscn"
+
+[display]
+
+window/size/viewport_width=480
+window/size/viewport_height=270
+window/size/mode=2
+window/size/initial_position_type=0
+window/stretch/mode="viewport"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+
+[input]
+
+move_left={
+"deadzone": 0.2,
+"events": []
+}
+move_right={
+"deadzone": 0.2,
+"events": []
+}
+jump={
+"deadzone": 0.2,
+"events": []
+}
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://dialogos/dialogue.dialogue", "res://dialogos/introduccion.dialogue", "res://dialogos/god.dialogue")
+
+[layer_names]
+
+2d_render/layer_1="Player"
+3d_render/layer_1="Player"
+2d_render/layer_2="Enemy"
+3d_render/layer_2="Enemy"
+2d_render/layer_3="Environment"
+3d_render/layer_3="Environment"
+2d_render/layer_4="Object"
+3d_render/layer_4="Object"
+2d_render/layer_5="Trap"
+3d_render/layer_5="Trap"
+2d_physics/layer_1="Player"
+2d_navigation/layer_1="Player"
+2d_physics/layer_2="Enemy"
+2d_navigation/layer_2="Enemy"
+2d_physics/layer_3="Environment"
+2d_navigation/layer_3="Environment"
+2d_physics/layer_4="Environment"
+2d_navigation/layer_4="Object"
+2d_physics/layer_5="Trap"
+2d_navigation/layer_5="Trap"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=3
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=0
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality=0
+anti_aliasing/screen_space_roughness_limiter/enabled=false
+lights_and_shadows/positional_shadow/atlas_quadrant_0_subdiv=0
+lights_and_shadows/positional_shadow/atlas_quadrant_1_subdiv=0
+lights_and_shadows/positional_shadow/atlas_quadrant_2_subdiv=0
+lights_and_shadows/positional_shadow/atlas_quadrant_3_subdiv=0
